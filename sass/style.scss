@@ -1,0 +1,43 @@
+@use "globals" as g;
+@use "typo";
+@use "list";
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: {
+    color: g.$dark-cyan;
+  }
+}
+
+main {
+  background-color: #fff;
+  border-radius: 10px;
+  width: min(400px, 90%);
+  overflow: hidden;
+  text-align: center;
+  font-family: g.$kumbh-sans;
+}
+
+figure {
+  position: relative;
+  background: {
+    image: url("../images/bg-pattern-card.svg");
+    size: cover;
+    repeat: no-repeat;
+  }
+  height: 150px;
+
+  & > img {
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-top: 6.5em;
+    transform: translate(-50%, 0);
+  }
+}
